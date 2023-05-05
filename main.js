@@ -55,7 +55,7 @@ fomulario.addEventListener("submit", function(event){
         <div class="cardInfo">
             <h3 class="cardTitle">${nombre}</h3>
             <p class="cardText">${descripcion}</p>
-            <div class="btn-visitar"><a href="${url}" target=blanck>VISITAR</a></div>
+            <div class="btn-visitar"><a href="${url}" target=blanck>Visitar</a></div>
         </div>
             
     </div>`
