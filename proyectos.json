@@ -1,0 +1,146 @@
+[
+    {
+        "nombre":"Trombones Free Code Camp",
+        "descripcion":"Ejercicio de maquetación de Curso FreeCodeCamp",
+        "url":"https://chrisayuron.github.io/Ejercicio3/",
+        "imagen":"./Proyectos/01. TrombonesFreeCodeCamp.png"
+    },
+    {
+        "nombre":"Ejercicio Frontend Mentor",
+        "descripcion":"Ejercicio de frontend mentor",
+        "url":"https://chrisayuron.github.io/Intro-component-with-sign-up-form/",
+        "imagen":"./Proyectos/02. EjercicioFM_Registro.png"
+    },
+    {
+        "nombre":"Tarjeta con Modal FooCamp",
+        "descripcion":"Ejercicio realizado para prueba de ingreso a FooCamp",
+        "url":"https://chrisayuron.github.io/modaltarjeta/",
+        "imagen":"./Proyectos/03. PruebaFooCamp.png"
+    },
+    {
+        "nombre":"Ejercicio Formulario Free Code Camp",
+        "descripcion":"Ejercicio de maquetación de Curso FreeCodeCamp",
+        "url":"https://chrisayuron.github.io/projecto2-freecodecamp/",
+        "imagen":"./Proyectos/04. FormularioFreeCodeCamp.png"
+    },
+    {
+        "nombre":"Ejercicio Frontend Mentor Card Profile",
+        "descripcion":"Ejercicio de frontend mentor",
+        "url":"https://chrisayuron.github.io/profile-card-component-main/",
+        "imagen":"./Proyectos/05. EjercicioFM_CardProfile.png"
+    },
+    {
+        "nombre":"Ejercicio Frontend Mentor Single Price",
+        "descripcion":"Ejercicio de frontend mentor",
+        "url":"https://chrisayuron.github.io/Single-price-grid-component/",
+        "imagen":"./Proyectos/06. EjercicioFM_SinglePrice.png"
+    },
+    {
+        "nombre":"Ejercicio Frontend Mentor Card Ethereum",
+        "descripcion":"Ejercicio de frontend mentor",
+        "url":"https://chrisayuron.github.io/Ejercicio-maquetacion-CSS2/",
+        "imagen":"Proyectos/07. EjercicioFM_CardEthereum.png"
+    },
+    {
+        "nombre":"Ejercicio Frontend Mentor Card QR",
+        "descripcion":"Ejercicio de frontend mentor",
+        "url":"https://chrisayuron.github.io/Ejercicios-CSS-Maquetacion1/",
+        "imagen":"./Proyectos/08. EjercicioFM_CardQR.png"
+    },
+    {
+        "nombre":"Convetidor Temperatura",
+        "descripcion":"Convertidor de temperatura Fahrenheit a Celsius",
+        "url":"https://chrisayuron.github.io/termomether-FarenheitToCelsius/",
+        "imagen":"./Proyectos/09. ConvertidorTemperatura.png"
+    },
+    {
+        "nombre":"Calculadora de IMC",
+        "descripcion":"Calculadora de IMC, con uso de colores según rango",
+        "url":"https://chrisayuron.github.io/imc-calc/",
+        "imagen":"./Proyectos/10. Calculadora IMC.png"
+    },
+    {
+        "nombre":"Portafolio Free Code Camp",
+        "descripcion":"Ejercicio de portafolio realizado en FreeCodeCamp",
+        "url":"https://chrisayuron.github.io/Portafolio/",
+        "imagen":"./Proyectos/11. Portafolio FreeCodeCamp.png"
+    },
+    {
+        "nombre":"Pokeapi",
+        "descripcion":"Practica de uso de API con la PokeAPI",
+        "url":"https://chrisayuron.github.io/Pokemon-PokeAPI/",
+        "imagen":"./Proyectos/12. Pokedex.png"
+    },
+    {
+        "nombre":"Desafio COEX Bootstrap",
+        "descripcion":"Desafio usando Bootstrap asignado para los talentos de COEX",
+        "url":"https://chrisayuron.github.io/Desafio-Bootstrap/",
+        "imagen":"./Proyectos/13. DesafioCOEX Bootstrap.png"
+    },
+    {
+        "nombre":"Piedra Papel Tijera",
+        "descripcion":"Ejercicio de piedra, papel y tijera usando HTML, CSS y JS",
+        "url":"https://chrisayuron.github.io/Rock-Paper-Scissor-V2/",
+        "imagen":"./Proyectos/14. PiedraPapelTijera.png"
+    },
+    {
+        "nombre":"Ejercicio de uso de localStorage y arrays ",
+        "descripcion":"Ejercicio para practicar el manejo de los arreglos y el almacenamiento en el localStorage",
+        "url":"https://chrisayuron.github.io/EjercicioPeque-osGamberritos/",
+        "imagen":"./Proyectos/15. LocalStorage y arrays.png"
+    },
+    {
+        "nombre":"Concéntrese",
+        "descripcion":"Juego concéntrese, haciendo uso de eventos y otras operaciones de JS",
+        "url":"https://chrisayuron.github.io/JuegoParejasV2/",
+        "imagen":"./Proyectos/16. Concentrese.png"
+    },
+    {
+        "nombre":"Agenda Electrónica",
+        "descripcion":"Uso de objetos, localstorage y filtrado",
+        "url":"https://chrisayuron.github.io/AgendaContactos/",
+        "imagen":"./Proyectos/17. Agenda Electronica.png"
+    },
+    {
+        "nombre":"Portafolio R&A",
+        "descripcion":"Este ejercicio fue diseñado para asignarlo como prueba a los talentos en COEX",
+        "url":"https://chrisayuron.github.io/Portafolio-R-A/",
+        "imagen":"./Proyectos/18. Portafolio RA.png"
+    },
+    {
+        "nombre":"Portafolio Adaptativo",
+        "descripcion":"Este ejercicio fue diseñado para asignarlo como taller de Responsive Design a los talentos en COEX",
+        "url":"https://chrisayuron.github.io/PortafolioMuestra/",
+        "imagen":"./Proyectos/19. Portafolio Responsive.png"
+    },
+    {
+        "nombre":"Ejerccio POO",
+        "descripcion":"Este ejercicio fue diseñado para asignarlo como taller de POO a los talentos en COEX",
+        "url":"https://chrisayuron.github.io/ejercicioPOO/",
+        "imagen":"./Proyectos/20. Ejercicio POO.png"
+    },
+    {
+        "nombre":"Login Tienda",
+        "descripcion":"Ejercicio diseñado para la práctica de uso de módulos, uso de API, manejo elemento modal y eventos con JS. Usuario de prueba es pepito123 y el password es 123456",
+        "url":"https://chrisayuron.github.io/Login-Tienda/",
+        "imagen":"./Proyectos/21. Login Tienda.png"
+    },
+    {
+        "nombre":"Calculadora",
+        "descripcion":"Calculadora usando eventos Keyup y click, operaciones básicas",
+        "url":"https://chrisayuron.github.io/Calculator2023/",
+        "imagen":"./Proyectos/22. Calculadora.png"
+    },
+    {
+        "nombre":"To Do List",
+        "descripcion":"Lista de tareas para hacer que permite crear, editar y eliminar tareas. También las tareas se almacenan en el localStorage",
+        "url":"https://chrisayuron.github.io/To-do-list-2023/",
+        "imagen":"./Proyectos/23. ToDoList.png"
+    },
+    {
+        "nombre":"Portafolio Web",
+        "descripcion":"Ejemplo de portafolio Web, utilizado para dar orientación a los talentos en COEX",
+        "url":"https://chrisayuron.github.io/MyWebPage/",
+        "imagen":"./Proyectos/24. Ejemplo-CVPortafolio.png"
+    }
+]

@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --PrimaryBG:#2563eb;
+    --SecundaryBG:#073486c6;
+    --TerciaryBG:#D3E6FE;
+    --Enlaces:#c8ff00;
+    --TextoClaro:#fae8ff;
+    --Blanco:#fefefe;
+    --Button:#1e293b;
+    --TextOscuro:#3e434a;
+    // --bg-100:#1e293b;
+    // --bg-200:#334155;
+    // --bg-300:#475569;  
+    
+}
+
+html,body{
+    height:100vh;
+    width: 100vw;
+    font-size: 1vh;
+    font-family: 'Roboto Slab', serif;
+  
+}
+
+
+*p{
+    font-size: 3rem;
+    font-weight: 500;
+}
+h1{
+    font-size: 10rem;
+    font-weight: 900;
+}
+h2{
+    font-size: 5rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 3.5rem;
+}
+.header{
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--PrimaryBG);
+    color: var(--TextoClaro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    h2{
+        padding-left: 2rem;
+        width: 50%;
+    }
+    .btn-menu{
+        right: 0;
+        height: 5rem;
+        position: absolute;
+        right: 1rem;        
+        svg{
+            fill: var(--Blanco);      
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+    }
+    
+    
+
+}
+.menu_principal{
+    background-color: var(--PrimaryBG);
+    position: absolute;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    top: 10rem;
+    right: 0;
+    padding: 1rem;
+    font-size:2.5rem ;
+    gap: 2vw; 
+    a{
+        color: var(--TextoClaro); 
+        text-decoration: none;
+    }
+    a:hover{
+        color: var(--Enlaces);
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}
+
+
+.seccion{
+    &Acerca{
+    width: 100vw;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 100%;
+    &_contenido{
+        background-color: var(--SecundaryBG);
+    }
+        .image{
+            padding-top: 5rem;
+            width: 100%;
+            height: 50rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .mifoto{
+                height: 100%;
+                width:auto;
+            }
+        }
+        .texto{
+            padding: 0 5rem 5rem;
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: justify;
+            color:var(--Blanco);
+            h1, h2{
+                text-align: center;
+            }
+            .modalProfesor{
+                height: 100vh;
+                width: 100vw;
+                background-color: var(--SecundaryBG);
+                position:fixed;
+                top: 0;
+                left: 0;
+                display: grid;
+                place-items: center;
+                font-size: 3rem;
+                display: none;
+                z-index: 900;
+                color: var(--TextOscuro);
+                ul{
+                    position: relative;
+                    width: 70%;
+                    height: fit-content;
+                    text-align: justify;
+                    background-color: var(--Blanco); 
+                    padding: 1vw 6vh;
+                    & li{
+                        padding: 1vh 0;
+                    }
+                }
+                .btn-closeModal{
+                    position: absolute;
+                    top:1rem;
+                    right: 1rem;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    outline: double 0.5rem;
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    font-size: 1vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--Blanco);
+                    color: var(--texto);
+                }
+            }
+            .ensenar{
+                text-decoration: underline;
+                font-weight: 700;
+                font-size: 3.5rem;
+                color: var(--Enlaces);
+                cursor: pointer;
+                position: relative;  
+            }
+            
+        
+        }
+    }
+        
+    &Proyectos{
+            width: 100%;
+            background-color: var(--TerciaryBG);
+            h2{
+                text-align: center;
+            }
+            .cardContainer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                margin: 1rem 0;
+            }
+
+            .card{
+                height: 60rem;
+                width: 50rem;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 0px 5px 3px var(--Button);
+            }
+            .cardInfo{
+                height: 0px;
+                width: 100%;
+                background-color: var(--SecundaryBG);
+                opacity: 0;
+                position: absolute;
+                top: 0;
+
+            }
+            .cardTitle{
+                text-align: center;
+                height: 30%;
+                width: 100%;
+                color: var(--TextoClaro);
+                font-size: 3rem;
+                padding: 0 1vh;
+
+            }
+            .cardText{
+                text-align: justify;
+                color: var(--TextoClaro);
+                height:55%;
+                width: 100%;
+                padding: 0 1vh;
+                font-size: 2.5rem;
+
+            }
+            .btn-visitar{
+                cursor: pointer;
+                width: 100px;
+                height: 15%;
+                font-size: 3rem;
+                font-weight: 700;
+                margin: auto;
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: var(--Enlaces);
+                    background-color: var(--Button);
+                    height: 80%;
+                    border-radius: 7px;
+                }
+            }
+            
+    }
+    /*VERSION MOBILE*/
+    &Habilidades{
+        background-color: var(--SecundaryBG);
+        height: 50vh;
+        width: 100%;
+        border: solid 1px red;  
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5rem;
+        .tecnicas,.blandas{
+            background-color: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            height: 10rem;
+            width: fit-content;
+            font-size: 3.5rem;
+            border-radius: 3rem;
+            padding: 1rem;
+            flex-shrink: 1;
+            flex-grow: 0;
+            color: var(--Enlaces);
+            
+        }
+        .tecnicas img{
+            transition: all 2s ease;
+            position: absolute;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            top:0;
+            left: calc(50% - 5rem);
+            z-index: -1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(1){
+            transition: all 2s ease;
+            top: -12rem;
+            left: -10rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(2){
+            transition: all 2s ease;
+            top: -12rem;
+            left: 0rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(3){
+            transition: all 2s ease;
+            top: -12rem;
+            left: 10rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(4){
+            transition: all 2s ease;
+            top: -12rem;
+            left: 22rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(5){
+            transition: all 2s ease;
+            top: 0rem;
+            left: 28rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(6){
+            transition: all 2s ease;
+            top: 10rem;
+            left: 22rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(7){
+            transition: all 2s ease;
+            top: 10rem;
+            left: 10rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(8){
+            transition: all 2s ease;
+            top: 10rem;
+            left: 0rem;
+            z-index: 1;
+        }
+        .tecnicas:hover .tecnical-icons img:nth-child(9){
+            transition: all 2s ease;
+            top: 10rem;
+            left: -10rem;
+            z-index: 1;
+        }  
+        /*
+        VERSION DEKSTOP
+        &Habilidades{
+            background-color: var(--SecundaryBG);
+            height: 50vh;
+            width: 100%;
+            border: solid 1px red;  
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5rem;
+            .tecnicas,.blandas{
+                background-color: #1e293b;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                height: 10rem;
+                width: fit-content;
+                font-size: 3.5rem;
+                border-radius: 3rem;
+                padding: 1rem;
+                flex-shrink: 1;
+                flex-grow: 0;
+                color: var(--Enlaces);
+                
+            }
+            .tecnicas img{
+                transition: all 2s ease;
+                position: absolute;
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                top:0;
+                left: calc(50% - 5rem);
+                z-index: -1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(1){
+                transition: all 2s ease;
+                top: -12rem;
+                left: -10rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(2){
+                transition: all 2s ease;
+                top: -12rem;
+                left: 0rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(3){
+                transition: all 2s ease;
+                top: -12rem;
+                left: 10rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(4){
+                transition: all 2s ease;
+                top: -12rem;
+                left: 22rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(5){
+                transition: all 2s ease;
+                top: 0rem;
+                left: 28rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(6){
+                transition: all 2s ease;
+                top: 10rem;
+                left: 22rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(7){
+                transition: all 2s ease;
+                top: 10rem;
+                left: 10rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(8){
+                transition: all 2s ease;
+                top: 10rem;
+                left: 0rem;
+                z-index: 1;
+            }
+            .tecnicas:hover .tecnical-icons img:nth-child(9){
+                transition: all 2s ease;
+                top: 10rem;
+                left: -10rem;
+                z-index: 1;
+            }  
+            */
+            .blandas-text span{
+                // transition: all 2s ease;
+                position: absolute;
+                left:0;
+                top: 0;
+                z-index: 0;
+                font-size: 2.5rem;
+                text-align: center;
+                border: solid 1px;
+                // opacity: 0;
+            }
+            .blandas-text span:nth-child(1){
+                width: 30rem;
+                top: -15rem;
+                left: -30rem;
+            }
+            .blandas-text span:nth-child(2){
+                width: 30rem;
+                top: -15rem;
+                left: 10rem;
+            }
+            .blandas-text span:nth-child(3){
+                width: 30rem;
+                top: 0rem;
+                left: 30rem;
+            }
+  
+  
+
+
+            
+        
+            // .tecnical-skill{
+            //     display: none;
+            // }
+            // .tecnical-icons{
+            //     display: flex;
+            //     gap: 0rem;
+            //     opacity: 0;
+                
+            // }
+            // .btn-mas{
+            //     // width: 300px;
+            //     // border: solid 1px;
+            //     width: 300px;
+            //     // left: calc(50% - 150px);
+            //     position: absolute;
+            //     top: -10rem;
+            //     text-align: center;
+            //     cursor: pointer;
+            // }
+        
+        }
+        &Contacto{
+            height:50vh;
+            width: 100%;
+            // background-color: #070707a4;
+            background-color: var(--TerciaryBG);
+            display: flex;
+        
+            align-items: center;
+            flex-direction: column;
+        
+            &__Cards{
+                height: 50%;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                // flex-shrink: 1;
+                //     flex-grow: 0;
+                    // flex-basis: 300px;
+                gap:10%;
+                
+                .cardContacto{
+                    margin: auto;
+                    height: 250px;
+                    width:90%;
+                    border: solid 1px ;
+                    padding: 30px;
+                    // margin: auto;
+                    background-color: var(--TextOscuro);
+                   &-image{
+                        height: 25px;
+                        width: 25px;
+                   }
+                }
+            }
+            &__Form{
+                border: solid 1px black;
+                width: 50%;
+                // height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                &__title{
+                    font-size: 3rem;
+                }
+                // &__control{}
+           
+        
+        
+            }  
+        
+    
+    
+        
+    }
+}
+    .footer{
+        // height: 10vh;
+        font-size: 3rem;
+        width: 100%;
+        background-color: var(--PrimaryBG);
+        color: var(--TextoClaro);
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    
+    
+.cardBackground{
+    // background-image: url('./Proyectos/01.\ TrombonesFreeCodeCamp.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+
+   
+}
+    
+.card:hover .cardInfo{
+    transition: all 1s ease-in-out;
+    // display: block;
+    height: 100%;
+    opacity: 1;
+    
+   
+ 
+ }
+
+
+
+
+// @media (min-width:1024px){
+//     .header{
+//         height: 10vh;
+//         width: 100%;
+//         background-color: var(--primary-100);
+//         color: var(--text-100);
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         font-size: 5rem;
+//         padding: 0 3vw;
+//     }
+//     .menu{
+//         list-style: none;
+//         display: flex;
+//         gap: 2vw; 
+//         & a{
+//             color: var(--text-100); 
+//             text-decoration: none;
+//         }
+//     }
+    
+//     .seccion{
+//         &Acerca{
+//         height: 90rem;
+//         width: 100%;
+//         background-color: #070707a4;
+//         display: grid;
+//         grid-template-columns: 40% 60%;
+//             & .image{
+//                 width: 100%;
+//                 height: 90rem;
+//                 border: solid 1px blue;
+//                 & .mifoto{
+//                     height: 100%;
+//                     width:auto;
+//                     // object-fit:contain;
+//                     // border-radius: 50%;
+//                 }
+//             }
+//             & .texto{
+//                 width: 100%;
+//                 height: 90rem;
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 justify-content: center;
+//                 border: solid 1px red;
+//                 & h1, & h2{
+//                     text-align: center;
+//                 }
+//             }
+            
+//         }
+//         &Proyectos{
+//             height: 100vh;
+//             width: 100%;
+//         }
+    
+//         &Contacto{
+//             height: 100vh;
+//             width: 100%;
+//             background-color: #070707a4;
+//             display: flex;
+        
+//             align-items: center;
+//             flex-direction: column;
+        
+//             &__Cards{
+//                 height: 50%;
+//                 width: 100%;
+//                 background-color: red;
+//                 border: solid 1px blue;
+//             }
+//             &__Form{
+//                 border: solid 1px black;
+//                 width: 50%;
+//                 height: 50%;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 flex-direction: column;
+//                 &__title{
+//                     font-size: 3rem;
+//                 }
+//                 // &__control{}
+           
+        
+        
+//             }  
+//         }
+    
+//     }
+    
+//     .footer{
+//         height: 10vh;
+//         font-size: 3rem;
+//         width: 100%;
+//         background-color: var(--primary-100);
+//         color: var(--text-100);
+//         display: flex;
+//         justify-content: center;
+//     }
+    
+//     .ensenar{
+//         text-decoration: underline;
+//         // color: blue;
+//         cursor: pointer;
+//         position: relative;  
+//     }
+    
+//     .profesor{
+//         height: 100%;
+//         width: 100%;
+//         background-color: #598EF3;
+//         position:fixed;
+//         top: 0;
+//         left: 0;
+//         display: grid;
+//         place-items: center;
+//         font-size: 3rem;
+//         display: none;
+//         z-index: 900;
+//         & ul{
+//             position: relative;
+//             width: 300px;
+//             height: fit-content;
+//             text-align: justify;
+//             background-color: #fae8ff; 
+//             padding: 1vw 6vh;
+//             & li{
+//                 padding: 1vh 0;
+//             }
+//         }
+//     }
+    
+//     .close{
+//         position: absolute;
+//         top:1rem;
+//         right: 1rem;
+//         cursor: pointer;
+//         border-radius: 50%;
+//         outline: double 0.5rem;
+//         height: 3.5rem;
+//         width: 3.5rem;
+//         font-size: 1vw;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         background-color: var(--Blanco);
+//         color: var(--Blanco);
+//     }
+// }
