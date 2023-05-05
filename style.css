@@ -149,7 +149,7 @@ h3 {
 }
 .seccionAcerca .texto .modalProfesor ul {
   position: relative;
-  width: 70%;
+  width: 95%;
   height: fit-content;
   text-align: justify;
   background-color: var(--Blanco);
@@ -184,6 +184,8 @@ h3 {
 }
 .seccionProyectos {
   width: 100%;
+  height: 100vh;
+  overflow: auto;
   background-color: var(--TerciaryBG);
 }
 .seccionProyectos h2 {
@@ -247,211 +249,84 @@ h3 {
   border-radius: 7px;
 }
 .seccionHabilidades {
-  background-color: var(--SecundaryBG);
-  height: 50vh;
+  background-color: var(--PrimaryBG);
   width: 100%;
+  height: 100vh;
   border: solid 1px red;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 5rem;
-  /*
-  VERSION DEKSTOP
-  &Habilidades{
-      background-color: var(--SecundaryBG);
-      height: 50vh;
-      width: 100%;
-      border: solid 1px red;  
-      position: relative;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 5rem;
-      .tecnicas,.blandas{
-          background-color: #1e293b;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          position: relative;
-          height: 10rem;
-          width: fit-content;
-          font-size: 3.5rem;
-          border-radius: 3rem;
-          padding: 1rem;
-          flex-shrink: 1;
-          flex-grow: 0;
-          color: var(--Enlaces);
-
-      }
-      .tecnicas img{
-          transition: all 2s ease;
-          position: absolute;
-          width: 10rem;
-          height: 10rem;
-          border-radius: 50%;
-          top:0;
-          left: calc(50% - 5rem);
-          z-index: -1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(1){
-          transition: all 2s ease;
-          top: -12rem;
-          left: -10rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(2){
-          transition: all 2s ease;
-          top: -12rem;
-          left: 0rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(3){
-          transition: all 2s ease;
-          top: -12rem;
-          left: 10rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(4){
-          transition: all 2s ease;
-          top: -12rem;
-          left: 22rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(5){
-          transition: all 2s ease;
-          top: 0rem;
-          left: 28rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(6){
-          transition: all 2s ease;
-          top: 10rem;
-          left: 22rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(7){
-          transition: all 2s ease;
-          top: 10rem;
-          left: 10rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(8){
-          transition: all 2s ease;
-          top: 10rem;
-          left: 0rem;
-          z-index: 1;
-      }
-      .tecnicas:hover .tecnical-icons img:nth-child(9){
-          transition: all 2s ease;
-          top: 10rem;
-          left: -10rem;
-          z-index: 1;
-      }  
-      */
+  padding: 2rem 0.5rem;
 }
 .seccionHabilidades .tecnicas, .seccionHabilidades .blandas {
-  background-color: #1e293b;
+  height: 50%;
+}
+.seccionHabilidades .tecnicas-title, .seccionHabilidades .blandas-title {
+  font-size: 3rem;
+  background-color: var(--Button);
+  color: var(--Enlaces);
+  width: 30%;
+  height: 7rem;
+  border-radius: 2rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
-  height: 10rem;
-  width: fit-content;
-  font-size: 3.5rem;
-  border-radius: 3rem;
+  border: solid 1px;
+  margin: auto;
+}
+.seccionHabilidades .tecnical-icons {
+  width: 100%;
+  display: grid;
+  flex-wrap: wrap;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--Enlaces);
+  gap: 3rem;
   padding: 1rem;
-  flex-shrink: 1;
-  flex-grow: 0;
+}
+.seccionHabilidades .blandas-text {
+  font-size: 0rem;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  border: solid 1px #2563eb;
   color: var(--Enlaces);
 }
-.seccionHabilidades .tecnicas img {
-  transition: all 2s ease;
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  top: 0;
-  left: calc(50% - 5rem);
-  z-index: -1;
+.seccionHabilidades .tecnical-icons img {
+  width: 7.5rem;
+  height: 7.5rem;
+  animation: rotar 2s infinite ease-in-out;
 }
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(1) {
-  transition: all 2s ease;
-  top: -12rem;
-  left: -10rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(2) {
-  transition: all 2s ease;
-  top: -12rem;
-  left: 0rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(3) {
-  transition: all 2s ease;
-  top: -12rem;
-  left: 10rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(4) {
-  transition: all 2s ease;
-  top: -12rem;
-  left: 22rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(5) {
-  transition: all 2s ease;
-  top: 0rem;
-  left: 28rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(6) {
-  transition: all 2s ease;
-  top: 10rem;
-  left: 22rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(7) {
-  transition: all 2s ease;
-  top: 10rem;
-  left: 10rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(8) {
-  transition: all 2s ease;
-  top: 10rem;
-  left: 0rem;
-  z-index: 1;
-}
-.seccionHabilidades .tecnicas:hover .tecnical-icons img:nth-child(9) {
-  transition: all 2s ease;
-  top: 10rem;
-  left: -10rem;
-  z-index: 1;
-}
-.seccionHabilidades .blandas-text span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
-  font-size: 2.5rem;
-  text-align: center;
-  border: solid 1px;
-}
-.seccionHabilidades .blandas-text span:nth-child(1) {
-  width: 30rem;
-  top: -15rem;
-  left: -30rem;
-}
-.seccionHabilidades .blandas-text span:nth-child(2) {
-  width: 30rem;
-  top: -15rem;
-  left: 10rem;
-}
-.seccionHabilidades .blandas-text span:nth-child(3) {
-  width: 30rem;
-  top: 0rem;
-  left: 30rem;
+@keyframes rotar {
+  10% {
+    transform: rotate3d(0, 1, 0, 36deg);
+  }
+  20% {
+    transform: rotate3d(0, 1, 0, 72deg);
+  }
+  30% {
+    transform: rotate3d(0, 1, 0, 108deg);
+  }
+  40% {
+    transform: rotate3d(0, 1, 0, 144deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  60% {
+    transform: rotate3d(0, 1, 0, 216deg);
+  }
+  70% {
+    transform: rotate3d(0, 1, 0, 252deg);
+  }
+  80% {
+    transform: rotate3d(0, 1, 0, 288deg);
+  }
+  90% {
+    transform: rotate3d(0, 1, 0, 324deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
 }
 .seccionContacto {
   height: 50vh;
@@ -503,9 +378,9 @@ h3 {
 }
 
 .cardBackground {
-  background-size: cover;
+  background-size: 100% 75%;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   width: 100%;
   height: 100%;
   position: absolute;
