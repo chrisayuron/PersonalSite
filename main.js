@@ -49,7 +49,7 @@ fomulario.addEventListener("submit", function(event){
     datos.forEach(item=>{
       const {nombre,descripcion,url,imagen}=item
       cartas.innerHTML+=`
-      <div class="card">
+      <div class="card" id="card">
         <div class="cardBackground" style="background-image: url('${imagen}')">  
         </div>
         <div class="cardInfo">
@@ -59,8 +59,10 @@ fomulario.addEventListener("submit", function(event){
         </div>
             
     </div>`
-
+      
     })
   }
 
   traerProyectos()
+
+

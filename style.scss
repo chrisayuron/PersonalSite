@@ -21,6 +21,9 @@
 
 }
 
+
+
+
 html,
 body {
     height: 100vh;
@@ -28,7 +31,9 @@ body {
     font-size: 1vh;
     font-family: 'Roboto Slab', serif;
 }
-
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
 *p {
     font-size: 3rem;
     font-weight: 500;
@@ -223,28 +228,56 @@ h3 {
     &Proyectos {
         height: 100vh;
         width: 100%;
-        overflow: auto;
         background-color: var(--TerciaryBG);
-
+        &::-webkit-scrollbar {
+            height: 10px;
+          }
+       
+          &::-webkit-scrollbar-track {
+            background: var(--PrimaryBG);
+          }
+          
+          &::-webkit-scrollbar-thumb {
+            background:var(--Enlaces);
+            border-radius: 10px;            
+          }
+    
         h2 {
             text-align: center;
+            height: 10%;
+            border: solid 1px;
         }
-
+       
         .cardContainer {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1rem 0;
+            align-items: center;
+            gap: 5rem;
+            height: 90%;
+            width:100%;
+            overflow: scroll;
+               
         }
-
+        
+        
         .card {
+            // flex:1 0 200px;
+            min-width: 200px;
             height: 60rem;
-            width: 50rem;
             position: relative;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 0px 5px 3px var(--Button);
+            z-index: 0;
+           
+        }
+
+        .card:hover{
+            transition: all 1s ease-in-out;
+            min-width: 300px;
+            // margin-left: -300px;
+            z-index: 100;
+            left:calc(50% - 150px)
+           
         }
 
         .cardInfo {
@@ -268,11 +301,9 @@ h3 {
         .cardText {
             color: var(--TextoClaro);
             height: 55%;
-            // width: 100%;
             padding: 0 1vh;
             font-size: 2.5rem;
             display: grid;
-            place-items: center;
             text-align: justify;
             padding: 0 2rem;
         }
@@ -304,7 +335,7 @@ h3 {
         }
 
         .cardBackground {
-            background-size: 100% 80%;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             height: 100%;
@@ -424,7 +455,6 @@ h3 {
                     img {
                     height: 10rem;
                     width: 10rem;
-                
         }
         }
 
