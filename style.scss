@@ -683,10 +683,20 @@ h3 {
 
     .seccion {
         &Proyectos {
-            .card {
-                flex: 1 0 90%;
-                height: 90%;
+            height: 100vh;
+            padding: 0;
+           
+            .cardContainer {
+                display: flex;
+                align-items: center;
+                overflow-x: scroll;
+                overflow-y: hidden; 
             }
+            .card {
+                flex: 1 0 50%;
+                height: 80%;
+            }
+            
         }
 
         &Contacto {

@@ -566,9 +566,19 @@ h3 {
     border: solid 1px;
     padding: 0.5rem;
   }
+  .seccionProyectos {
+    height: 100vh;
+    padding: 0;
+  }
+  .seccionProyectos .cardContainer {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
   .seccionProyectos .card {
-    flex: 1 0 90%;
-    height: 90%;
+    flex: 1 0 50%;
+    height: 80%;
   }
   .seccionContacto__Cards {
     gap: 1%;
