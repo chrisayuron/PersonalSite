@@ -9,6 +9,7 @@
   --PrimaryBG: #2563eb;
   --SecundaryBG: #073486c6;
   --TerciaryBG: #D3E6FE;
+  --FourthBG: #0447d8;
   --Enlaces: #c8ff00;
   --TextoClaro: #fae8ff;
   --Blanco: #fefefe;
@@ -40,15 +41,27 @@ h1 {
 
 h2 {
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h3 {
   font-size: 3.5rem;
 }
 
+.ir-arriba {
+  position: fixed;
+  top: 90%;
+  right: 1rem;
+  background-color: red;
+}
+.ir-arriba img {
+  width: 5rem;
+  height: 5rem;
+  filter: grayscale(0) invert(1);
+}
+
 .header {
-  height: 10%;
+  height: 15rem;
   width: 100%;
   background-color: var(--PrimaryBG);
   color: var(--TextoClaro);
@@ -60,6 +73,11 @@ h3 {
 .header h2 {
   padding-left: 2rem;
   width: 50%;
+  height: 100%;
+}
+.header h2 img {
+  width: auto;
+  height: 100%;
 }
 .header .btn-menu {
   height: 50%;
@@ -69,6 +87,11 @@ h3 {
 .header .btn-menu svg {
   fill: var(--Blanco);
   height: 100%;
+  width: fit-content;
+}
+
+.oculto {
+  display: none;
 }
 
 .menu_principal {
@@ -76,9 +99,8 @@ h3 {
   background-color: var(--PrimaryBG);
   position: absolute;
   list-style: none;
-  display: none;
   flex-direction: column;
-  top: 8rem;
+  top: 15rem;
   right: 0rem;
   padding: 1rem;
   font-size: 2.5rem;
@@ -91,8 +113,6 @@ h3 {
 }
 .menu_principal a:hover {
   color: var(--Enlaces);
-  font-weight: 700;
-  letter-spacing: 0.5px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -125,15 +145,16 @@ h3 {
   color: var(--Enlaces);
   border: none;
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: 15px;
+  outline: 1px solid var(--Enlaces);
   font-weight: 700;
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
 }
 .seccionAcerca .image .descargarcv a {
   color: var(--Enlaces);
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .seccionAcerca .image .descargarcv:hover, .seccionAcerca .image .descargarcv:hover a {
   background-color: var(--Enlaces);
@@ -199,44 +220,29 @@ h3 {
 }
 .seccionProyectos {
   height: 100vh;
-  width: 100%;
   background-color: var(--TerciaryBG);
-}
-.seccionProyectos::-webkit-scrollbar {
-  height: 10px;
-}
-.seccionProyectos::-webkit-scrollbar-track {
-  background: var(--PrimaryBG);
-}
-.seccionProyectos::-webkit-scrollbar-thumb {
-  background: var(--Enlaces);
-  border-radius: 10px;
+  padding: 0 10px;
 }
 .seccionProyectos h2 {
   text-align: center;
   height: 10%;
-  border: solid 1px;
+  color: var(--PrimaryBG);
 }
 .seccionProyectos .cardContainer {
   display: flex;
   align-items: center;
-  gap: 5rem;
   height: 90%;
   width: 100%;
   overflow: scroll;
 }
 .seccionProyectos .card {
-  min-width: 200px;
+  margin: 0 10px;
+  flex: 1 0 90%;
   height: 60rem;
   position: relative;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 0px 5px 3px var(--Button);
-}
-.seccionProyectos .card:hover {
-  transition: all 1s ease-in-out;
-  min-width: 300px;
-  left: calc(50% - 150px);
 }
 .seccionProyectos .cardInfo {
   height: 0px;
@@ -339,65 +345,125 @@ h3 {
   animation: rotar 2s infinite ease-in-out;
 }
 @keyframes rotar {
-  10% {
-    transform: rotate3d(0, 1, 0, 36deg);
+  from {
+    transform: rotate3d(0, 1, 0, 1deg);
   }
-  20% {
-    transform: rotate3d(0, 1, 0, 72deg);
-  }
-  30% {
-    transform: rotate3d(0, 1, 0, 108deg);
-  }
-  40% {
-    transform: rotate3d(0, 1, 0, 144deg);
-  }
-  50% {
-    transform: rotate3d(0, 1, 0, 180deg);
-  }
-  60% {
-    transform: rotate3d(0, 1, 0, 216deg);
-  }
-  70% {
-    transform: rotate3d(0, 1, 0, 252deg);
-  }
-  80% {
-    transform: rotate3d(0, 1, 0, 288deg);
-  }
-  90% {
-    transform: rotate3d(0, 1, 0, 324deg);
-  }
-  100% {
+  to {
     transform: rotate3d(0, 1, 0, 360deg);
   }
 }
 .seccionContacto {
-  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 3rem;
+}
+.seccionContacto h2 {
+  color: var(--PrimaryBG);
 }
 .seccionContacto__Cards {
   display: flex;
   flex-wrap: wrap;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10%;
-  outline: solid 1px;
+  justify-content: center;
+  width: 100%;
 }
-.seccionContacto__Cards img {
+.seccionContacto__Cards .cardLocation img,
+.seccionContacto__Cards .cardEmail img,
+.seccionContacto__Cards .cardPhone img {
   height: 10rem;
   width: 10rem;
+  filter: grayscale(100%) invert(100%);
+}
+.seccionContacto__Cards .cardLocation img {
+  height: 15rem;
+  width: 15rem;
+}
+.seccionContacto__Cards .cardSocial img {
+  height: 7rem;
+  width: 7rem;
+}
+.seccionContacto__Cards .cardContacto {
+  padding: 2.5rem 0;
+  border-radius: 1.5rem;
+  width: 80%;
+  height: 20rem;
+  text-align: center;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--FourthBG);
+  color: var(--TextoClaro);
+  font-weight: bolder;
+  font-size: 3.5rem;
+  box-shadow: 0px 0px 5px 3px var(--Button);
+}
+.seccionContacto__Cards .cardContacto a {
+  color: var(--Enlaces);
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+.seccionContacto__Cards .cardContacto a:hover {
+  color: var(--TextoClaro);
 }
 .seccionContacto__Form {
+  background-color: var(--PrimaryBG);
   outline: solid 1px black;
-  width: 50%;
-  display: flex;
+  border-radius: 15px;
+  width: 90%;
+  display: grid;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.seccionContacto__Form__title {
   font-size: 3rem;
+  padding: 5rem 0;
+  color: var(--TextoClaro);
+}
+.seccionContacto__Form .form__control {
+  display: flex;
+  flex-direction: column;
+}
+.seccionContacto__Form .form__control input,
+.seccionContacto__Form .form__control textarea {
+  width: 50rem;
+  height: 5rem;
+  border: none;
+  outline: 1px solid;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+.seccionContacto__Form .form__control input:focus,
+.seccionContacto__Form .form__control textarea:focus {
+  padding-left: 1rem;
+}
+.seccionContacto__Form .form__control textarea {
+  height: 15rem;
+}
+.seccionContacto__Form .form__control textarea:focus {
+  padding-left: 1rem;
+}
+.seccionContacto__Form input[type=submit] {
+  background-color: var(--Button);
+  color: var(--Enlaces);
+  height: 7rem;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-family: "Roboto Slab", serif;
+  border: none;
+  outline: 1x solid var(--Enlaces);
+  font-size: 3rem;
+  font-weight: 600;
+}
+.seccionContacto__Form input[type=submit]:hover {
+  background-color: var(--Enlaces);
+  color: var(--Button);
+  outline: 1x solid var(--Button);
 }
 
 .footer {
@@ -407,6 +473,143 @@ h3 {
   color: var(--TextoClaro);
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .seccionProyectos .card {
+    flex: 1 0 50%;
+  }
+  .seccionProyectos .cardTitle {
+    font-size: 4.5rem;
+  }
+  .seccionProyectos .cardText {
+    font-size: 3.5rem;
+  }
+  .seccionHabilidades .tecnicas-title,
+  .seccionHabilidades .blandas-title {
+    font-size: 3.5rem;
+  }
+  .seccionHabilidades .tecnical-icons {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .seccionHabilidades .tecnical-icons img {
+    width: 10.5rem;
+  }
+  .seccionHabilidades .blandas-text p {
+    font-size: 3.5rem;
+  }
+  .seccionContacto {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .seccionContacto__Cards {
+    gap: 5%;
+  }
+  .seccionContacto__Cards .cardContacto {
+    width: 40%;
+    height: 30rem;
+  }
+  .seccionContacto__Form {
+    grid-template-areas: "nombre email" "asunto asunto" "boton boton";
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 2rem;
+    gap: 2rem;
+  }
+  .seccionContacto__Form .form_name {
+    grid-area: nombre;
+  }
+  .seccionContacto__Form .form_name input {
+    width: 100%;
+  }
+  .seccionContacto__Form .reply_to {
+    grid-area: email;
+  }
+  .seccionContacto__Form .reply_to input {
+    width: 100%;
+  }
+  .seccionContacto__Form .message {
+    grid-area: asunto;
+    width: 100%;
+  }
+  .seccionContacto__Form .message textarea {
+    width: 100%;
+  }
+  .seccionContacto__Form #button {
+    grid-area: boton;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    position: static;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .nav {
+    width: 100%;
+  }
+  .menu_principal {
+    font-size: 4.5rem;
+    position: static;
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    width: 95%;
+    gap: 1.5rem;
+    flex-direction: row;
+  }
+  .menu_principal li a {
+    width: 100%;
+    border: solid 1px;
+    padding: 0.5rem;
+  }
+  .seccionProyectos .card {
+    flex: 1 0 90%;
+    height: 90%;
+  }
+  .seccionContacto__Cards {
+    gap: 1%;
+    width: 100%;
+  }
+  .seccionContacto__Cards .cardContacto {
+    width: 22%;
+    height: 30rem;
+  }
+  .seccionContacto__Form .form_name {
+    grid-area: nombre;
+  }
+  .seccionContacto__Form .form_name input {
+    width: 100%;
+  }
+  .seccionContacto__Form .form_name input::placeholder {
+    font-size: 3rem;
+  }
+  .seccionContacto__Form .reply_to {
+    grid-area: email;
+  }
+  .seccionContacto__Form .reply_to input {
+    width: 100%;
+  }
+  .seccionContacto__Form .reply_to input::placeholder {
+    font-size: 3rem;
+  }
+  .seccionContacto__Form .message {
+    grid-area: asunto;
+    width: 100%;
+  }
+  .seccionContacto__Form .message textarea {
+    width: 100%;
+  }
+  .seccionContacto__Form .message textarea::placeholder {
+    font-size: 3rem;
+  }
+  .seccionContacto__Form #button {
+    grid-area: boton;
+    width: 30rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,15 +10,12 @@
     --PrimaryBG: #2563eb;
     --SecundaryBG: #073486c6;
     --TerciaryBG: #D3E6FE;
+    --FourthBG: #0447d8;
     --Enlaces: #c8ff00;
     --TextoClaro: #fae8ff;
     --Blanco: #fefefe;
     --Button: #1e293b;
     --TextOscuro: #3e434a;
-    // --bg-100:#1e293b;
-    // --bg-200:#334155;
-    // --bg-300:#475569;  
-
 }
 
 
@@ -31,9 +28,11 @@ body {
     font-size: 1vh;
     font-family: 'Roboto Slab', serif;
 }
+
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
+}
+
 *p {
     font-size: 3rem;
     font-weight: 500;
@@ -46,15 +45,28 @@ h1 {
 
 h2 {
     font-size: 5rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 h3 {
     font-size: 3.5rem;
 }
 
+.ir-arriba {
+    position: fixed;
+    top: 90%;
+    right: 1rem;
+    background-color: red;
+
+    & img {
+        width: 5rem;
+        height: 5rem;
+        filter: grayscale(0) invert(1);
+    }
+}
+
 .header {
-    height: 10%;
+    height: 15rem;
     width: 100%;
     background-color: var(--PrimaryBG);
     color: var(--TextoClaro);
@@ -66,6 +78,12 @@ h3 {
     h2 {
         padding-left: 2rem;
         width: 50%;
+        height: 100%;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
 
     .btn-menu {
@@ -76,8 +94,13 @@ h3 {
         svg {
             fill: var(--Blanco);
             height: 100%;
+            width: fit-content;
         }
     }
+}
+
+.oculto {
+    display: none;
 }
 
 .menu_principal {
@@ -85,26 +108,26 @@ h3 {
     background-color: var(--PrimaryBG);
     position: absolute;
     list-style: none;
-    display: none;
     flex-direction: column;
-    top: 8rem;
+    top: 15rem;
     right: 0rem;
     padding: 1rem;
     font-size: 2.5rem;
     gap: 2vw;
     z-index: 200;
 
+
     a {
         color: var(--TextoClaro);
         text-decoration: none;
+
     }
 
     a:hover {
         color: var(--Enlaces);
-        font-weight: 700;
-        letter-spacing: 0.5px;
         transition: all 0.3s ease-in-out;
     }
+
 }
 
 .seccion {
@@ -139,21 +162,24 @@ h3 {
                 color: var(--Enlaces);
                 border: none;
                 padding: 2rem;
-                border-radius: 2rem;
+                border-radius: 15px;
+                outline: 1px solid var(--Enlaces);
                 font-weight: 700;
                 position: absolute;
-                bottom: 0;
+                bottom: 1rem;
 
                 & a {
                     color: var(--Enlaces);
                     text-decoration: none;
-                    font-size: 2rem;
+                    font-size: 3rem;
+
                 }
 
                 &:hover,
                 &:hover a {
                     background-color: var(--Enlaces);
                     color: var(--Button);
+
                 }
             }
         }
@@ -227,57 +253,35 @@ h3 {
 
     &Proyectos {
         height: 100vh;
-        width: 100%;
         background-color: var(--TerciaryBG);
-        &::-webkit-scrollbar {
-            height: 10px;
-          }
-       
-          &::-webkit-scrollbar-track {
-            background: var(--PrimaryBG);
-          }
-          
-          &::-webkit-scrollbar-thumb {
-            background:var(--Enlaces);
-            border-radius: 10px;            
-          }
-    
+        padding: 0 10px;
+
         h2 {
             text-align: center;
             height: 10%;
-            border: solid 1px;
+            color: var(--PrimaryBG);
+
         }
-       
+
         .cardContainer {
             display: flex;
             align-items: center;
-            gap: 5rem;
             height: 90%;
-            width:100%;
+            width: 100%;
             overflow: scroll;
-               
-        }
-        
-        
-        .card {
-            // flex:1 0 200px;
-            min-width: 200px;
-            height: 60rem;
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 0px 5px 3px var(--Button);
-        
-           
+
+
         }
 
-        .card:hover{
-            transition: all 1s ease-in-out;
-            min-width: 300px;
-            // margin-left: -300px;
-         
-            left:calc(50% - 150px)
-           
+
+        .card {
+            margin: 0 10px;
+            flex: 1 0 90%;
+            height: 60rem;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 5px 3px var(--Button);
         }
 
         .cardInfo {
@@ -385,7 +389,6 @@ h3 {
             display: grid;
             place-items: center;
             row-gap: 1rem;
-            ;
             color: var(--TextoClaro);
             padding-top: 4rem;
         }
@@ -397,88 +400,353 @@ h3 {
         }
 
         @keyframes rotar {
-            10% {
-                transform: rotate3d(0, 1, 0, 36deg);
+            from {
+                transform: rotate3d(0, 1, 0, 1deg);
             }
 
-            20% {
-                transform: rotate3d(0, 1, 0, 72deg);
-            }
-
-            30% {
-                transform: rotate3d(0, 1, 0, 108deg);
-            }
-
-            40% {
-                transform: rotate3d(0, 1, 0, 144deg);
-            }
-
-            50% {
-                transform: rotate3d(0, 1, 0, 180deg);
-            }
-
-            60% {
-                transform: rotate3d(0, 1, 0, 216deg);
-            }
-
-            70% {
-                transform: rotate3d(0, 1, 0, 252deg);
-            }
-
-            80% {
-                transform: rotate3d(0, 1, 0, 288deg);
-            }
-
-            90% {
-                transform: rotate3d(0, 1, 0, 324deg);
-            }
-
-            100% {
+            to {
                 transform: rotate3d(0, 1, 0, 360deg);
             }
         }
     }
 
     &Contacto {
-        height:100vh;
         width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin-bottom: 3rem;
+
+        h2 {
+            color: var(--PrimaryBG);
+        }
 
         &__Cards {
             display: flex;
             flex-wrap: wrap;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10%;  
-            outline: solid 1px;
-                    img {
-                    height: 10rem;
-                    width: 10rem;
-        }
+            justify-content: center;
+            width: 100%;
+
+            .cardLocation img,
+            .cardEmail img,
+            .cardPhone img {
+                height: 10rem;
+                width: 10rem;
+                filter: grayscale(100%) invert(100%);
+            }
+
+            .cardLocation img {
+                height: 15rem;
+                width: 15rem;
+            }
+
+            .cardSocial img {
+                height: 7rem;
+                width: 7rem;
+
+            }
+
+            .cardContacto {
+                padding: 2.5rem 0;
+                border-radius: 1.5rem;
+                width: 80%;
+                height: 20rem;
+                text-align: center;
+                margin: 10px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: var(--FourthBG);
+                color: var(--TextoClaro);
+                font-weight: bolder;
+                font-size: 3.5rem;
+                box-shadow: 0px 0px 5px 3px var(--Button);
+
+                & a {
+                    color: var(--Enlaces);
+                    text-decoration: none;
+                    letter-spacing: 0.2rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--TextoClaro);
+                    }
+                }
+
+            }
+
         }
 
         &__Form {
+            background-color: var(--PrimaryBG);
             outline: solid 1px black;
-            width: 50%;
-            display: flex;
+            border-radius: 15px;
+            width: 90%;
+            display: grid;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            font-size: 3rem;
+            padding: 5rem 0;
+            color: var(--TextoClaro);
 
-            &__title {
-                font-size: 3rem;
+            & .form__control {
+                display: flex;
+                flex-direction: column;
+
+                input,
+                textarea {
+                    width: 50rem;
+                    height: 5rem;
+                    border: none;
+                    outline: 1px solid;
+                    margin-bottom: 1.5rem;
+                    border-radius: 5px;
+                    padding-left: 1rem;
+                    font-family: 'Roboto Slab', serif;
+
+                    &:focus {
+                        padding-left: 1rem;
+                    }
+                }
+
+                textarea {
+                    height: 15rem;
+
+                    &:focus {
+                        padding-left: 1rem;
+                    }
+                }
+
             }
+
+            input[type="submit"] {
+                background-color: var(--Button);
+                color: var(--Enlaces);
+                height: 7rem;
+                width: 50%;
+                margin: auto;
+                padding: 1rem;
+                border-radius: 2rem;
+                font-family: 'Roboto Slab', serif;
+                border: none;
+                outline: 1x solid var(--Enlaces);
+                font-size: 3rem;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: var(--Enlaces);
+                    color: var(--Button);
+                    outline: 1x solid var(--Button);
+                }
+            }
+
         }
     }
 }
 
 .footer {
-    // height: 10vh;
     font-size: 3rem;
     width: 100%;
     background-color: var(--PrimaryBG);
     color: var(--TextoClaro);
     display: flex;
     justify-content: center;
+}
+
+@media (min-width:768px) {
+    .seccion {
+        &Proyectos {
+
+            .card {
+                flex: 1 0 50%;
+            }
+
+            .cardTitle {
+                font-size: 4.5rem;
+            }
+
+            .cardText {
+                font-size: 3.5rem;
+            }
+
+        }
+
+        &Habilidades {
+
+            .tecnicas-title,
+            .blandas-title {
+                font-size: 3.5rem;
+            }
+
+            .tecnical-icons {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .tecnical-icons img {
+                width: 10.5rem;
+            }
+
+            .blandas-text p {
+                font-size: 3.5rem;
+            }
+        }
+
+        &Contacto {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 3rem;
+
+            &__Cards {
+                gap: 5%;
+
+                .cardContacto {
+                    width: 40%;
+                    height: 30rem;
+                }
+            }
+
+            &__Form {
+                grid-template-areas:
+                    'nombre email'
+                    'asunto asunto'
+                    'boton boton';
+                grid-template-columns: repeat(2, 1fr);
+                padding: 2rem 2rem;
+                gap: 2rem;
+
+                .form_name {
+                    grid-area: nombre;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                .reply_to {
+                    grid-area: email;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                .message {
+                    grid-area: asunto;
+                    width: 100%;
+
+                    textarea {
+                        width: 100%;
+                    }
+                }
+
+                #button {
+                    grid-area: boton;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1024px) {
+    .header {
+        position: static;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .menu_principal {
+        font-size: 4.5rem;
+        position: static;
+        display: flex;
+        justify-content: end;
+        padding-right: 2rem;
+        width: 95%;
+        gap: 1.5rem;
+        flex-direction: row;
+
+        & li a {
+            width: 100%;
+            border: solid 1px;
+            padding: 0.5rem;
+        }
+    }
+
+    .seccion {
+        &Proyectos {
+            .card {
+                flex: 1 0 90%;
+                height: 90%;
+            }
+        }
+
+        &Contacto {
+            &__Cards {
+                gap: 1%;
+                width: 100%;
+
+                .cardContacto {
+                    width: 22%;
+                    height: 30rem;
+                }
+            }
+
+            &__Form {
+
+                .form_name {
+                    grid-area: nombre;
+
+                    input {
+                        width: 100%;
+
+                        &::placeholder {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+
+                .reply_to {
+                    grid-area: email;
+
+                    input {
+                        width: 100%;
+
+                        &::placeholder {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+
+                .message {
+                    grid-area: asunto;
+                    width: 100%;
+
+                    textarea {
+                        width: 100%;
+
+                        &::placeholder {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+
+                #button {
+                    grid-area: boton;
+                    width: 30rem;
+                }
+
+            }
+        }
+
+
+    }
 }

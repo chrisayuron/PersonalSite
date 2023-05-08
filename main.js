@@ -3,7 +3,7 @@ const aniosEns =  document.getElementById("aniosEns");
 const ensenar = document.querySelector(".ensenar");
 const profesor = document.querySelector(".modalProfesor");
 const closeModal = document.querySelector(".btn-closeModal");
-const menu = document.querySelector(".btn-menu");
+const menu = document.querySelector("#menu");
 const menuPrincipal = document.querySelector(".menu_principal");
 anioCopy.textContent = new Date().getFullYear();
 aniosEns.textContent = new Date().getFullYear() - 2008;
@@ -11,11 +11,12 @@ const btn = document.getElementById("button");
 const fomulario = document.getElementById("form");
 const cartas = document.querySelector(".cardContainer")
 
+
 menu.addEventListener("click",()=>{
-  if(menuPrincipal.style.display == "flex"){
-    menuPrincipal.style.display = "none"    
+  if(menuPrincipal.classList.contains('oculto')){
+    menuPrincipal.classList.toggle('oculto')
   }else{
-    menuPrincipal.style.display = "flex"
+    menuPrincipal.classList.toggle('oculto')
   }
 })
 
@@ -29,18 +30,23 @@ closeModal.addEventListener('click',()=>{
 
 fomulario.addEventListener("submit", function(event){
   event.preventDefault();
-  btn.value = "Enviando...";
-  const serviceID = "service_t855crg";
-  const templateID = "template_5dsarek";
-  emailjs.sendForm(serviceID, templateID, this)
-    then(() => {
-      btn.value = "Enviado";
-      alert("Mensaje Enviado");
-      Location.reload()
-    }, (err) => {
-      btn.value = "No Enviado";
-      alert("No fue posible enviar " + JSON.stringify(err));
-    });
+  if(from_name.value=='' || reply_to.value=='' || message.value==''){
+    alert("Hay campos vacios");
+  }else{
+    
+    btn.value = "Enviando...";
+    const serviceID = "service_t855crg";
+    const templateID = "template_5dsarek";
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = "Enviado";
+        alert("Mensaje Enviado");
+        window.location.reload()
+      }, (err) => {
+        btn.value = "No Enviado";
+        alert("No fue posible enviar " + JSON.stringify(err));
+      });
+  }
   });
 
   async function traerProyectos(){

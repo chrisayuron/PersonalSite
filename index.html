@@ -14,9 +14,9 @@
 </head>
 <body>
     <header class="header">
-        <h2>Chrisayuron</h2>
+        <h2><img src="./img/LogoChrisayuron.png" alt=""></h2>
         <div class="btn-menu" >
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg id="menu" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="92px" height="92px" viewBox="0 0 92 92" enable-background="new 0 0 92 92" xml:space="preserve">
             <path id="XMLID_101_" d="M78,23.5H14c-3.6,0-6.5-2.9-6.5-6.5s2.9-6.5,6.5-6.5h64c3.6,0,6.5,2.9,6.5,6.5S81.6,23.5,78,23.5z M84.5,46
            c0-3.6-2.9-6.5-6.5-6.5H14c-3.6,0-6.5,2.9-6.5,6.5s2.9,6.5,6.5,6.5h64C81.6,52.5,84.5,49.6,84.5,46z M84.5,75c0-3.6-2.9-6.5-6.5-6.5
@@ -25,7 +25,7 @@
         </div>
         <nav class="nav">
             <ul class="menu_principal">
-                <li><a href="#acerca">Acerca de Mí</a></li>
+                <li><a href="#acerca">Acerca de mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#contacto">Contactame</a></li>
@@ -107,53 +107,50 @@
                 <h2>CONTACTAME</h2>
                 <div class="seccionContacto__Cards">
                     <div class="cardContacto cardLocation">
-                        <div class="cardContacto-image"><img src="./img/ubicacion.svg" alt=""></div>
-                        <h4 class="cardContacto-title">Location</h4>
-                        <p class="cardContacto-text"></p>
+                        <div class="cardContacto-image"><a href="https://goo.gl/maps/EYbaJnQoTk7XVtH49" target="_blank"><img src="./img/ubicacion.svg" alt="icon location"></a></div>
+                        <p class="cardContacto-text">Bucaramanga</a></p>
                     </div>
                     <div class="cardContacto cardEmail">
                         <div class="cardContacto-image">
-                            <img src="./img/correo.svg" alt="">
+                            <a href="mailto:rrnewball@gmail.com"><img src="./img/correo.svg" alt="icon email"></a>
                        </div>
-                        <h4 class="cardContacto-title">Email</h4>
-                        <p class="cardContacto-text"></p>
+                        <p class="cardContacto-text">rrnewball@gmail.com</p>
                     </div>
 
                     <div class="cardContacto cardPhone">
                         <div class="cardContacto-image">
-                            <img src="./img/telefon.svg" alt="">
+                            <a href="https://wa.me/573156453755?text=Hola%20Ronald,%20he%20mirado%20tu%20página y%20me%20gustaría%20contactarme%20contigo" target="_blank"><img src="./img/whatsappBN.svg" alt="icono whatsapp"></a>
                         </div>
-                        <h4 class="cardContacto-title">Phone</h4>
-                        <p class="cardContacto-text"></p>
+                        <p class="cardContacto-text">Enviar mensaje por WhatsApp
+                        </p>
                     </div>
                     <div class="cardContacto cardSocial">
                         <div class="cardContacto-image">
-                            <img src="./img/githubColor.svg" alt="icono github">
-                            <img src="./img/linkedinColor.svg" alt="icono linkedin ">
-                            <img src="./img/Whatsapp.svg" alt="icono whatsapp">
-                            <img src="./img/twitter.svg" alt="icono twitter">
+                            <a href="https://github.com/chrisayuron" target="_blank"><img src="./img/githubColor.svg" alt="icono github"></a>
+                            <a href="https://www.linkedin.com/in/ronald-rojas-newball-9b8b02241/" target="_blank"><img src="./img/linkedinColor.svg" alt="icono linkedin "></a>
+                          
+                            <a href="https://twitter.com/Chrisayuron" target="_blank"><img src="./img/twitter.svg" alt="icono twitter"></a>
                         </div>
-                        <h4 class="cardContacto-title">Social</h4>
+                        <h4 class="cardContacto-title">Social Media</h4>
                         <p class="cardContacto-text"></p>
                     </div>
                 </div>
-                <form id="form" class="seccionContacto__Form form">
-                    <!-- <h3 class="form__title">CONTACTAME</h3> -->
-                    <div class="form__control">
-                      <label for="from_name">Nombre</label>
-                      <input type="text" name="from_name" id="from_name"/>
+                <form id="form" class="seccionContacto__Form ">
+                    <div class="form__control form_name">
+                      <label for="form_name">Nombre</label>
+                      <input type="text" name="form_name" id="form_name" placeholder="Su nombre"/>
                     </div>
-                    <div class="form__control">
+                    <div class="form__control reply_to">
                         <label for="reply_to">Email</label>
-                        <input type="text" name="reply_to" id="reply_to"/>
+                        <input type="text" name="reply_to" id="reply_to" placeholder="Direccion remitente"/>
                     </div>
-                    <div class="form__control">
+                    <div class="form__control message">
                       <label for="message">Mensaje</label>
-                      <textarea name="message" id="message"></textarea>
+                      <textarea name="message" id="message" placeholder="Asunto"></textarea>
                     </div>
                     
                   
-                    <input type="submit" id="button" value="Send Email" >
+                    <input type="submit" id="button" value="Enviar mensaje" >
                   </form>
                   
                   <script type="text/javascript"
@@ -163,7 +160,10 @@
                     emailjs.init('V_2iIw-cfmxujL55s')
                   </script>
             </section>
-        </main>    
+        </main> 
+        <div class="ir-arriba">
+            <a href="#"><img src="./img/Up.svg" alt=""></a>
+        </div>   
         <footer class="footer">
             <p>Ronald Rojas Newball &copy; <span id="anioCopy"></span></p>
         </footer>
