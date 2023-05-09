@@ -427,7 +427,7 @@ h3 {
 }
 .seccionContacto__Form .form__control input,
 .seccionContacto__Form .form__control textarea {
-  width: 50rem;
+  width: 100%;
   height: 5rem;
   border: none;
   outline: 1px solid;
@@ -450,7 +450,7 @@ h3 {
   background-color: var(--Button);
   color: var(--Enlaces);
   height: 7rem;
-  width: 50%;
+  width: 90%;
   margin: auto;
   padding: 1rem;
   border-radius: 2rem;
@@ -523,12 +523,14 @@ h3 {
   }
   .seccionContacto__Form .form_name input {
     width: 100%;
+    height: 8rem;
   }
   .seccionContacto__Form .reply_to {
     grid-area: email;
   }
   .seccionContacto__Form .reply_to input {
     width: 100%;
+    height: 8rem;
   }
   .seccionContacto__Form .message {
     grid-area: asunto;
@@ -539,6 +541,7 @@ h3 {
   }
   .seccionContacto__Form #button {
     grid-area: boton;
+    width: 40%;
   }
 }
 @media (min-width: 1024px) {
