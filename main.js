@@ -1,4 +1,5 @@
-const anioCopy = document.getElementById("anioCopy");
+(function(){
+  const anioCopy = document.getElementById("anioCopy");
 const aniosEns =  document.getElementById("aniosEns");
 const ensenar = document.querySelector(".ensenar");
 const profesor = document.querySelector(".modalProfesor");
@@ -70,5 +71,4 @@ fomulario.addEventListener("submit", function(event){
   }
 
   traerProyectos()
-
-
+})()

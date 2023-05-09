@@ -180,8 +180,7 @@ h3 {
         }
 
         .texto {
-
-            padding: 5rem;
+            padding: 2rem 1rem;
             display: grid;
             text-align: center;
             color: var(--Blanco);
@@ -349,7 +348,7 @@ h3 {
 
     &Habilidades {
         background-color: var(--PrimaryBG);
-        height: 100vh;
+        // height: 100vh;
 
         .tecnicas,
         .blandas {
@@ -551,6 +550,7 @@ h3 {
     color: var(--TextoClaro);
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 @media (min-width:768px) {
@@ -688,7 +688,7 @@ h3 {
     }
 
     .header {
-        position: static;
+        position: relative;
     }
 
     .btn-menu {
@@ -701,18 +701,22 @@ h3 {
 
     .menu_principal {
         font-size: 4.5rem;
-        position: static;
+        position: absolute;
+        right: 2rem;
+        // height: 10vh;
+        top:3.5rem;
         display: flex;
         justify-content: end;
-        padding-right: 2rem;
-        width: 95%;
-        gap: 1.5rem;
+        align-items: center;
+        width:fit-content;
         flex-direction: row;
+        // border: solid 1px;
 
         & li a {
-            width: 100%;
-            border: solid 1px;
-            padding: 0.5rem;
+            width: fit-content;
+            // border: solid 1px;
+            text-align: center;
+            // padding: 0.5rem;
         }
     }
 
