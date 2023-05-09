@@ -73,14 +73,14 @@ h3 {
 .header h2 {
   padding-left: 2rem;
   width: 50%;
-  height: 100%;
+  height: 70%;
 }
 .header h2 img {
   width: auto;
   height: 100%;
 }
 .header .btn-menu {
-  height: 50%;
+  height: 40%;
   position: absolute;
   right: 1rem;
 }
@@ -476,6 +476,14 @@ h3 {
 }
 
 @media (min-width: 768px) {
+  .header h2 {
+    height: 80%;
+  }
+  .header .btn-menu {
+    height: 50%;
+  }
+}
+@media (min-width: 768px) {
   .seccionProyectos .card {
     flex: 1 0 50%;
   }
@@ -568,6 +576,30 @@ h3 {
     width: 100%;
     border: solid 1px;
     padding: 0.5rem;
+  }
+  .seccionAcerca {
+    height: 90vh;
+    width: 100%;
+  }
+  .seccionAcerca_contenido {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  .seccionAcerca_contenido .image {
+    width: 70%;
+    height: 70%;
+  }
+  .seccionAcerca_contenido .image .mifoto {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .seccionAcerca_contenido .texto {
+    height: 100%;
+    width: 100%;
   }
   .seccionProyectos {
     height: 100vh;

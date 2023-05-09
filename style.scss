@@ -18,9 +18,6 @@
     --TextOscuro: #3e434a;
 }
 
-
-
-
 html,
 body {
     height: 100vh;
@@ -78,7 +75,7 @@ h3 {
     h2 {
         padding-left: 2rem;
         width: 50%;
-        height: 100%;
+        height: 70%;
 
         img {
             width: auto;
@@ -87,7 +84,7 @@ h3 {
     }
 
     .btn-menu {
-        height: 50%;
+        height: 40%;
         position: absolute;
         right: 1rem;
 
@@ -555,6 +552,18 @@ h3 {
 }
 
 @media (min-width:768px) {
+    .header {
+        h2 {
+            height: 80%;
+        }
+    
+        .btn-menu {
+            height: 50%;
+        }
+    }
+}
+
+@media (min-width:768px) {
     .seccion {
         &Proyectos {
 
@@ -685,6 +694,30 @@ h3 {
     }
 
     .seccion {
+        &Acerca{
+            height: 90vh;
+              width: 100%;
+            &_contenido{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                .image{
+                    width: 70%;
+                    height:70%;
+                    .mifoto{
+                        padding: 0;
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .texto{
+                    height: 100%;
+                    width: 100%;
+                }
+        }
+        }
         &Proyectos {
             height: 100vh;
             padding: 0;
