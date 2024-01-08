@@ -31,7 +31,7 @@ closeModal.addEventListener('click',()=>{
 
 fomulario.addEventListener("submit", function(event){
   event.preventDefault();
-  if(from_name.value=='' || reply_to.value=='' || message.value==''){
+  if(form_name.value=='' || reply_to.value=='' || message.value==''){
     alert("Hay campos vacios");
   }else{
     
