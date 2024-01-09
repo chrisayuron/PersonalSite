@@ -43,6 +43,7 @@ fomulario.addEventListener("submit", function(event){
         btn.value = "Enviado";
         alert("Mensaje Enviado");
         window.location.reload()
+        window.scrollTo(0, 0);
       }, (err) => {
         btn.value = "No Enviado";
         alert("No fue posible enviar " + JSON.stringify(err));

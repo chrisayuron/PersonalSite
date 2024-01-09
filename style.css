@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: outline-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -17,37 +17,40 @@
   --TextOscuro: #3e434a;
 }
 
-html,
-body {
+html {
   height: 100vh;
   width: 100%;
   font-size: 1vh;
   font-family: "Roboto Slab", serif;
 }
 
+body {
+  width: 100%;
+}
+
 * p {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 900;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 2.5rem, 3em);
 }
 
 .ir-arriba {
   position: fixed;
   top: 90%;
-  right: 0.5rem;
+  right: 1vw;
   background-color: red;
 }
 .ir-arriba img {
@@ -72,7 +75,7 @@ h3 {
   height: 70%;
 }
 .header h2 img {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 .header .btn-menu {
@@ -83,7 +86,7 @@ h3 {
 .header .btn-menu svg {
   fill: var(--Blanco);
   height: 100%;
-  width: fit-content;
+  width: 100%;
 }
 
 .oculto {
@@ -91,15 +94,16 @@ h3 {
 }
 
 .menu_principal {
-  width: 18rem;
+  width: 70%;
   background-color: var(--PrimaryBG);
   position: absolute;
   list-style: none;
   flex-direction: column;
+  text-align: center;
   top: 15rem;
   right: 0rem;
   padding: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   gap: 2vw;
   z-index: 200;
 }
@@ -110,6 +114,10 @@ h3 {
 .menu_principal a:hover {
   color: var(--Enlaces);
   transition: all 0.3s ease-in-out;
+}
+
+.main {
+  width: 100%;
 }
 
 .seccionAcerca {
@@ -124,17 +132,16 @@ h3 {
 }
 .seccionAcerca .image {
   padding-top: 5rem;
-  width: fit-content;
-  height: 50rem;
+  width: 100%;
+  height: 90%;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
   margin: auto;
 }
 .seccionAcerca .image .mifoto {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 .seccionAcerca .image .descargarcv {
   background-color: var(--Button);
@@ -157,8 +164,11 @@ h3 {
   color: var(--Button);
 }
 .seccionAcerca .texto {
-  padding: 2rem 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
   display: grid;
+  place-content: center;
   text-align: center;
   color: var(--Blanco);
 }
@@ -209,19 +219,19 @@ h3 {
 .seccionAcerca .texto .ensenar {
   text-decoration: underline;
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--Enlaces);
   cursor: pointer;
   position: relative;
 }
 .seccionProyectos {
-  height: 100vh;
+  height: 50vh;
+  width: 100%;
   background-color: var(--TerciaryBG);
   padding: 0 10px;
 }
 .seccionProyectos h2 {
   text-align: center;
-  height: 10%;
   color: var(--PrimaryBG);
 }
 .seccionProyectos .cardContainer {
@@ -234,7 +244,7 @@ h3 {
 .seccionProyectos .card {
   margin: 0 10px;
   flex: 1 0 90%;
-  height: 60rem;
+  height: 50%;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
@@ -288,7 +298,7 @@ h3 {
   color: var(--Button);
 }
 .seccionProyectos .cardBackground {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
@@ -299,12 +309,13 @@ h3 {
   opacity: 1;
 }
 .seccionHabilidades {
+  width: 100%;
   background-color: var(--PrimaryBG);
 }
 .seccionHabilidades .tecnicas,
 .seccionHabilidades .blandas {
   height: 50%;
-  padding: 2rem 0.5rem;
+  padding: 2rem 1rem;
 }
 .seccionHabilidades .tecnicas-title,
 .seccionHabilidades .blandas-title {
@@ -317,6 +328,7 @@ h3 {
   outline: solid 1px;
   margin: auto;
   padding: 2rem;
+  text-align: center;
 }
 .seccionHabilidades .tecnical-icons {
   display: grid;
@@ -335,9 +347,9 @@ h3 {
   padding-top: 4rem;
 }
 .seccionHabilidades .tecnical-icons img {
-  width: 7.5rem;
+  width: 6.5rem;
   height: auto;
-  animation: rotar 2s infinite ease-in-out;
+  animation: rotar 4s infinite ease-in-out;
 }
 @keyframes rotar {
   from {
@@ -366,20 +378,16 @@ h3 {
 .seccionContacto__Cards .cardLocation img,
 .seccionContacto__Cards .cardEmail img,
 .seccionContacto__Cards .cardPhone img {
-  height: 10rem;
-  width: 10rem;
+  height: auto;
+  width: 25%;
   filter: grayscale(100%) invert(100%);
 }
-.seccionContacto__Cards .cardLocation img {
-  height: 15rem;
-  width: 15rem;
-}
 .seccionContacto__Cards .cardSocial img {
-  height: 7rem;
-  width: 7rem;
+  height: auto;
+  width: 20%;
 }
 .seccionContacto__Cards .cardContacto {
-  padding: 2.5rem 0;
+  padding: 2.5rem 0.5rem;
   border-radius: 1.5rem;
   width: 80%;
   height: 20rem;
@@ -391,13 +399,18 @@ h3 {
   background-color: var(--FourthBG);
   color: var(--TextoClaro);
   font-weight: bolder;
-  font-size: 3.5rem;
+  font-size: 3rem;
+  text-overflow: clip;
   box-shadow: 0px 0px 5px 3px var(--Button);
+}
+.seccionContacto__Cards .cardContacto-text {
+  width: 100%;
+  text-overflow: clip;
 }
 .seccionContacto__Cards .cardContacto a {
   color: var(--Enlaces);
   text-decoration: none;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   cursor: pointer;
 }
 .seccionContacto__Cards .cardContacto a:hover {
@@ -407,7 +420,7 @@ h3 {
   background-color: var(--PrimaryBG);
   outline: solid 1px black;
   border-radius: 15px;
-  width: 96%;
+  width: 95%;
   display: grid;
   place-items: center;
   font-size: 3rem;
@@ -429,6 +442,7 @@ h3 {
   font-family: "Roboto Slab", serif;
   padding-left: 1rem;
   font-size: 2.5rem;
+  width: 100%;
 }
 .seccionContacto__Form .form__control input:focus,
 .seccionContacto__Form .form__control textarea:focus {
@@ -455,7 +469,7 @@ h3 {
   font-family: "Roboto Slab", serif;
   border: none;
   outline: 1x solid var(--Enlaces);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 .seccionContacto__Form input[type=submit]:hover {
@@ -481,8 +495,6 @@ h3 {
   .header .btn-menu {
     height: 50%;
   }
-}
-@media (min-width: 768px) {
   .seccionProyectos .card {
     flex: 1 0 50%;
   }
