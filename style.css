@@ -379,12 +379,12 @@ h3 {
 .seccionContacto__Cards .cardEmail img,
 .seccionContacto__Cards .cardPhone img {
   height: auto;
-  width: 25%;
+  width: 20%;
   filter: grayscale(100%) invert(100%);
 }
 .seccionContacto__Cards .cardSocial img {
   height: auto;
-  width: 20%;
+  width: 15%;
 }
 .seccionContacto__Cards .cardContacto {
   padding: 2.5rem 0.5rem;
